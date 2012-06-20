@@ -1,0 +1,256 @@
+#ifndef bp__decls__hpp
+#define bp__decls__hpp
+
+#define BP_USE_BOEHM_GC
+#include <precompiled/all.hpp>
+#define BP_USE_GMP
+#include <gmpxx.h>
+#include <gmp.h>
+typedef uint64_t UInt64;
+typedef int32_t Int32;
+typedef short Short;
+typedef double Float64;
+typedef int_fast32_t Int;
+typedef float Float;
+typedef const char ConstChar;
+typedef mpz_class BigInt;
+typedef bool Bool;
+typedef int64_t Int64;
+typedef char Byte;
+typedef Byte * CString;
+typedef uint32_t UInt;
+typedef uint32_t UInt32;
+typedef float Float32;
+typedef size_t Size;
+#define BP_PTR_DECL(x) x*
+
+class BPDivisionByZeroException;
+class BPException;
+class BPFileReadStream;
+template <typename TDataType> class BPMutableVector;
+class BPFileNotFoundException;
+class BPInt;
+class BPBenchmark;
+class BPAccessDeniedException;
+class BPUTF8String;
+class BPRange;
+class BPDateTime;
+template <typename TDataType> class BPMemPointer;
+class BPDirectoryHandle;
+template <typename TX, typename TY> class BPPoint;
+class BPFileWriteException;
+class BPFile;
+class BPTimeStamp;
+class BPDirectory;
+class BPFileHandle;
+class BPFileWriteStream;
+template <typename TCenter, typename TRadius> class BPCircle;
+
+// Strings
+BPUTF8String* EMPTY_STRING;
+BPUTF8String* file_17_bp_string_0;
+BPUTF8String* file_17_bp_string_1;
+BPUTF8String* file_17_bp_string_2;
+BPUTF8String* file_17_bp_string_3;
+BPUTF8String* file_21_bp_string_5;
+BPUTF8String* file_21_bp_string_4;
+BPUTF8String* file_21_bp_string_3;
+BPUTF8String* file_21_bp_string_2;
+BPUTF8String* file_21_bp_string_1;
+BPUTF8String* file_21_bp_string_0;
+BPUTF8String* file_22_bp_string_0;
+BPUTF8String* file_22_bp_string_1;
+BPUTF8String* file_22_bp_string_2;
+BPUTF8String* file_22_bp_string_3;
+BPUTF8String* file_23_bp_string_1;
+BPUTF8String* file_23_bp_string_0;
+BPUTF8String* file_23_bp_string_3;
+BPUTF8String* file_23_bp_string_2;
+BPUTF8String* file_19_bp_string_0;
+BPUTF8String* file_19_bp_string_1;
+BPUTF8String* file_24_bp_string_2;
+BPUTF8String* file_24_bp_string_3;
+BPUTF8String* file_24_bp_string_0;
+BPUTF8String* file_24_bp_string_1;
+BPUTF8String* file_24_bp_string_4;
+BPUTF8String* file_29_bp_string_0;
+BPUTF8String* file_31_bp_string_0;
+BPUTF8String* file_31_bp_string_1;
+BPUTF8String* file_32_bp_string_4;
+BPUTF8String* file_32_bp_string_3;
+BPUTF8String* file_32_bp_string_2;
+BPUTF8String* file_32_bp_string_1;
+BPUTF8String* file_32_bp_string_0;
+BPUTF8String* file_26_bp_string_0;
+BPUTF8String* file_26_bp_string_1;
+BPUTF8String* file_36_bp_string_2;
+BPUTF8String* file_36_bp_string_1;
+BPUTF8String* file_36_bp_string_0;
+BPUTF8String* file_35_bp_string_0;
+BPUTF8String* file_41_bp_string_1;
+BPUTF8String* file_41_bp_string_0;
+BPUTF8String* file_38_bp_string_0;
+BPUTF8String* file_43_bp_string_0;
+BPUTF8String* file_1_bp_string_2;
+BPUTF8String* file_1_bp_string_3;
+BPUTF8String* file_1_bp_string_0;
+BPUTF8String* file_1_bp_string_1;
+
+// Prototypes
+inline void print__UTF8String(BPUTF8String*);
+inline BPUTF8String* input__UTF8String(BPUTF8String*);
+inline Bool compareMem___MemPointer_Byte____MemPointer_Byte___Size(Byte*, Byte*, Size);
+inline void copyMem__MemPointer_Byte___MemPointer_Byte___Int(Byte*, Byte*, Int);
+inline void copyMem___MemPointer_Byte___MemPointer_Byte___Size(Byte*, Byte*, Size);
+inline void benchWarmUp();
+inline Int64 systemTimeMicro();
+inline void copyMem___MemPointer_Byte____MemPointer_Byte___Size(Byte*, Byte*, Size);
+inline BPUTF8String* readableNumber__UInt32(UInt32);
+inline Size min__Int__Size(Int, Size);
+inline void setMem__MemPointer_Byte___Byte__Int(Byte*, Byte, Int);
+inline Int max__Int__Int(Int, Int);
+inline void copyMem__MemPointer_Byte___MemPointer_Byte___Size(Byte*, Byte*, Size);
+inline Size fileSize__UTF8String(BPUTF8String*);
+inline BPUTF8String* readFile__UTF8String(BPUTF8String*);
+inline void benchReadAll();
+inline void benchFileIO();
+inline Int distanceSq__Int__Int__Int__Int(Int, Int, Int, Int);
+inline Float64 sqr__Int(Int);
+inline Float64 distance__Int__Int__Int__Int(Int, Int, Int, Int);
+inline void benchDistance();
+inline BigInt factorial__BigInt(BigInt);
+inline BigInt factorial__BigInt(BigInt);
+inline void benchFactorial();
+inline void benchMath();
+inline void benchConcat();
+inline void benchReplace();
+inline void benchStrings();
+inline BPDateTime* getCurrentDateTime();
+inline void benchCurrentTime();
+inline void benchTime();
+inline void benchAll__Bool(Bool);
+// extern func bp_getNextFile;
+// extern func bp_fwrite;
+// extern func bp_compress;
+// extern func bp_setMem;
+// extern func bp_sizeOf;
+// extern func bp_openDir;
+// extern func bp_atan2;
+// extern func bp_sqrt;
+// extern func bp_isAlnum;
+// extern func bp_uncompress;
+// extern func bp_fileSize;
+// extern func bp_renameFile;
+// extern func bp_isInf;
+// extern func bp_swap;
+// extern func bp_systemTime;
+// extern func bp_sin;
+// extern func bp_usleep;
+// extern func bp_copyMem;
+// extern func bp_ceil;
+// extern func bp_floor;
+// extern func bp_now;
+// extern func bp_systemTimeMicro;
+// extern func bp_fileExists;
+// extern func bp_log;
+// extern func bp_exp;
+// extern func bp_fread;
+// extern func bp_readLine;
+// extern func bp_strlenUtf8Xchars;
+// extern func bp_gcCollect;
+// extern func bp_fflush;
+// extern func bp_formatTimeStamp;
+// extern func bp_fclose;
+// extern func bp_strlen;
+// extern func bp_input;
+// extern func bp_isAlpha;
+// extern func bp_write;
+// extern func bp_isSpace;
+// extern func bp_deleteFile;
+// extern func bp_strlenUtf8;
+// extern func bp_fopen;
+// extern func bp_flush;
+// extern func bp_closeDir;
+// extern func bp_writeLine;
+// extern func bp_getCurrentDir;
+// extern func bp_compareMem;
+// extern func bp_log10;
+// extern func bp_fileModificationTime;
+// extern func bp_cos;
+// extern func bp_compressMaxSize;
+// extern func bp_rand;
+// extern func bp_writeXbytes;
+// extern func bp_utf8Slice;
+// extern func bp_isDigit;
+// extern func bp_writeXbytesLine;
+// extern func bp_insertInt;
+// extern func bp_isNan;
+// extern func bp_changeDir;
+#ifndef bp_Core_Startup_hpp
+	#define   bp_Core_Startup_hpp
+	#include <bp/Core/Startup.hpp>
+#endif
+
+#ifndef bp_Core_Memory_Memory_hpp
+	#define   bp_Core_Memory_Memory_hpp
+	#include <bp/Core/Memory/Memory.hpp>
+#endif
+
+#ifndef bp_Core_String_CharTypes_hpp
+	#define   bp_Core_String_CharTypes_hpp
+	#include <bp/Core/String/CharTypes.hpp>
+#endif
+
+#ifndef bp_Math_Math_hpp
+	#define   bp_Math_Math_hpp
+	#include <bp/Math/Math.hpp>
+#endif
+
+#ifndef bp_Core_String_String_hpp
+	#define   bp_Core_String_String_hpp
+	#include <bp/Core/String/String.hpp>
+#endif
+
+#ifndef bp_Core_Output_Output_hpp
+	#define   bp_Core_Output_Output_hpp
+	#include <bp/Core/Output/Output.hpp>
+#endif
+
+#ifndef bp_Core_Core_hpp
+	#define   bp_Core_Core_hpp
+	#include <bp/Core/Core.hpp>
+#endif
+
+#ifndef bp_Utils_Compression_hpp
+	#define   bp_Utils_Compression_hpp
+	#include <bp/Utils/Compression.hpp>
+#endif
+
+#ifndef bp_Utils_Input_hpp
+	#define   bp_Utils_Input_hpp
+	#include <bp/Utils/Input.hpp>
+#endif
+
+#ifndef bp_FileSystem_File_File_hpp
+	#define   bp_FileSystem_File_File_hpp
+	#include <bp/FileSystem/File/File.hpp>
+#endif
+
+#ifndef bp_FileSystem_Directory_Directory_hpp
+	#define   bp_FileSystem_Directory_Directory_hpp
+	#include <bp/FileSystem/Directory/Directory.hpp>
+#endif
+
+#ifndef bp_DateTime_DateTime_hpp
+	#define   bp_DateTime_DateTime_hpp
+	#include <bp/DateTime/DateTime.hpp>
+#endif
+
+#ifndef bp_Math_Geometry_Geometry_hpp
+	#define   bp_Math_Geometry_Geometry_hpp
+	#include <bp/Math/Geometry/Geometry.hpp>
+#endif
+
+#include <vector>
+
+#endif
