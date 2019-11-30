@@ -8,14 +8,14 @@ _start:
 	mov edx, 1
 	dec ecx
 
+ALIGN 16
 main:
-	jz exit
 	mov rax, rbx
 	mov rbx, rdx
 	mov rdx, rax
 	add rdx, rbx
 	dec ecx
-	jmp main
+	jnz main
 
 exit:
 	mov rax, 60

@@ -6,9 +6,9 @@ for dir in *; do
 	if [ -d "$SCRIPTPATH/$dir" ]
 	then
 		cd "$SCRIPTPATH/$dir" &&
-		go build &&
+		rustc -O $dir.rs -o $dir &&
 		echo &&
-		echo "go/$dir" &&
+		echo "rust/$dir" &&
 		time ./$dir
 		#echo $?
 	fi
