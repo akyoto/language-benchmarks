@@ -2,11 +2,11 @@ bits 64
 global _start
 
 _start:
-	mov ecx, 1000000000
+	mov ecx, 100000000
 	xor eax, eax
 	xor ebx, ebx
 	mov edx, 1
-	cmp ecx, 0
+	dec ecx
 
 main:
 	jz exit
@@ -19,5 +19,5 @@ main:
 
 exit:
 	mov rax, 60
-	mov rdi, 0
+	mov rdi, rdx
 	syscall

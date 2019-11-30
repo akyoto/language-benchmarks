@@ -1,11 +1,11 @@
 main() {
-	n = 1000000000
+	n = 100000000
 
 	mut a = 0
 	mut b = 0
 	mut c = 1
 
-	for 0..n {
+	for 1..n {
 		a = b
 		b = c
 		c = a + b
