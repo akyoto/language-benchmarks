@@ -5,14 +5,14 @@ Benchmarking programming language compilers.
 ```text
 asm/fibonacci
 
-real    0m0.048s
-user    0m0.048s
+real    0m0.047s
+user    0m0.047s
 sys     0m0.000s
 
 asm/fibonacci-2
 
 real    0m0.024s
-user    0m0.024s
+user    0m0.023s
 sys     0m0.000s
 
 c/fibonacci
@@ -24,7 +24,13 @@ sys     0m0.000s
 go/fibonacci
 
 real    0m0.032s
-user    0m0.032s
+user    0m0.033s
+sys     0m0.000s
+
+q/fibonacci
+
+real    0m0.047s
+user    0m0.047s
 sys     0m0.000s
 
 rust/fibonacci
