@@ -1,1 +1,16 @@
-C++/*
+*
+!*/
+!*.c
+!*.q
+!*.s
+!*.v
+!*.go
+!*.py
+!*.rb
+!*.mod
+!*.sum
+!*.yml
+!LICENSE
+!README.md
+!.editorconfig
+!.gitignore
