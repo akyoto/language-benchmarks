@@ -10,4 +10,6 @@ main() {
 		b = c
 		c = a + b
 	}
+
+	syscall(60, c)
 }
