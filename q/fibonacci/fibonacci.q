@@ -1,15 +1,16 @@
-main() {
-	n = 100000000
+import sys
 
-	mut a = 0
+main() {
+	n := 100000000
+
 	mut b = 0
 	mut c = 1
 
 	for 1..n {
-		a = b
+		a := b
 		b = c
 		c = a + b
 	}
 
-	syscall(60, c)
+	sys.exit(c)
 }

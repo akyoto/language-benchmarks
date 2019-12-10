@@ -6,7 +6,7 @@ for dir in *; do
 	if [ -d "$SCRIPTPATH/$dir" ]
 	then
 		cd "$SCRIPTPATH/$dir" &&
-		q build &&
+		q build -O &&
 		echo &&
 		echo "q/$dir" &&
 		time ./$dir
